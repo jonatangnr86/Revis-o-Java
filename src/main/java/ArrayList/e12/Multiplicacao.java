@@ -15,7 +15,6 @@ public class Multiplicacao {
         for (int i = 0; i < 60; i++) {
             lista2.add((int) Math.round(Math.random() * 75));
         }
-
         for (int j = 0; j < lista1.size(); j++) {
             if (j < lista2.size()) {
                 lista3.add(lista1.get(j) * lista2.get(j));
