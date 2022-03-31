@@ -6,6 +6,7 @@ public class Atividade03 {
     public static void main(String[] args) {
         String f = "";
 
+        Leitura1 ler = new Leitura1();
         Scanner scan = new Scanner(System.in);
 
         while(!f.equalsIgnoreCase("f") && !f.equalsIgnoreCase("m")){
