@@ -14,11 +14,10 @@ public class funcoesCaixa {
     private double valorDep;
 
     public static String realizarLeitura(String msg) { //Classe statica não precisa criar objeto para chamar
-
         return JOptionPane.showInputDialog(msg);
     }
 
-    public  Integer realizarLeituraInteger(String msg) {
+    public Integer realizarLeituraInteger(String msg) {
         while (true) {
             try {
                 return Integer.parseInt(JOptionPane.showInputDialog(msg));
@@ -27,7 +26,8 @@ public class funcoesCaixa {
             }
         }
     }
-    public  double realizarLeituraDouble(String msg) {
+
+    public double realizarLeituraDouble(String msg) {
         while (true) {
             try {
                 return Double.parseDouble(JOptionPane.showInputDialog(msg));
@@ -42,7 +42,7 @@ public class funcoesCaixa {
             JOptionPane.showMessageDialog(null, "Valor Inválido");
         } else if (getValorSaque() < getSaldo()) {
             setSaldo(getSaldo() - getValorSaque());
-            extrato.add(this.data +" Saque de R$" + getValorSaque() + "\n");
+            extrato.add(this.data + " Saque de R$" + getValorSaque() + "\n");
             JOptionPane.showMessageDialog(null, "Saque efetuado com sucesso");
         } else if (getValorSaque() > getSaldo()) {
             JOptionPane.showMessageDialog(null, "Saldo insuficiente");
@@ -53,26 +53,18 @@ public class funcoesCaixa {
         if (this.valorDep > 0) {
             setSaldo(this.saldo + this.getValorDep());
             JOptionPane.showMessageDialog(null, "Depósito efetuato com Sucesso!");
-            extrato.add(this.data + " Depósito de " + this.getValorDep()+ "\n");
+            extrato.add(this.data + " Depósito de " + this.getValorDep() + "\n");
         } else {
             JOptionPane.showMessageDialog(null, "Valor inválido!");
         }
     }
 
-    public void extrats(){
-
-            JOptionPane.showMessageDialog(null, extrato);
-
+    public void saldo() {
+        JOptionPane.showMessageDialog(null, "Saldo R$ " + this.getSaldo());
     }
 
-    public String saldo() {
-        return "Saldo R$ " + this.getSaldo();
-    }
-
-    public void extra() {
-        for (String x : extrato) {
-            System.out.println(x);
-        }
+    public void extrats() {
+        JOptionPane.showMessageDialog(null, extrato);
     }
 
     public double getSaldo() {
@@ -89,7 +81,6 @@ public class funcoesCaixa {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
-
     }
 
     public double getValorDep() {
@@ -100,18 +91,18 @@ public class funcoesCaixa {
         this.valorDep = valorDep;
     }
 
-    public funcoesCaixa(double saldo) {
-        this.saldo = saldo;
-        this.valorSaque = valorSaque;
-        this.valorDep = valorDep;
-        this.data = data;
-    }
-
     public Date getData() {
         return data;
     }
 
     public void setData(Date data) {
+        this.data = data;
+    }
+
+    public funcoesCaixa(double saldo) {
+        this.saldo = saldo;
+        this.valorSaque = valorSaque;
+        this.valorDep = valorDep;
         this.data = data;
     }
 }

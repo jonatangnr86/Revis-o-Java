@@ -9,7 +9,7 @@ public class ListaMultiplos {
         List<Integer> lista = new ArrayList<>();
         Scanner scan = new Scanner(System.in);
 
-    System.out.println("Informe um n´numero inteiro: ");
+    System.out.println("Informe um numero inteiro: ");
     int number = scan.nextInt();
 
     for(int i = 0; i < 15; i++){

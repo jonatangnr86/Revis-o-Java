@@ -16,19 +16,19 @@ public class caixaEletronico {
                             "1- Saldo\n" +
                             "2- Saque\n3- Depósito\n" +
                             "4- extrato\n5- Sair");
-            if (opcao == 1){
-                JOptionPane.showMessageDialog(null, "Seu Saldo é\n" + acao.getSaldo());
-            }else if (opcao == 2){
+            if (opcao == 1) {
+                acao.saldo();
+            } else if (opcao == 2) {
                 acao.setValorSaque(acao.realizarLeituraDouble("Valor do Saque:"));
                 acao.sacar();
-            } else if(opcao == 3){
+            } else if (opcao == 3) {
                 acao.setValorDep(acao.realizarLeituraDouble("Valor do depoósito:"));
                 acao.depositar();
-            } else if (opcao == 4){
+            } else if (opcao == 4) {
                 acao.extrats();
-            } else if (opcao == 5){
+            } else if (opcao == 5) {
                 vld = false;
-            }else {
+            } else {
                 JOptionPane.showMessageDialog(null, "Opção Inválida!");
             }
         }

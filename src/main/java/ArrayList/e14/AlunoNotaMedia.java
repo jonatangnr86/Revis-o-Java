@@ -25,8 +25,7 @@ public class AlunoNotaMedia {
             alunos.get(aluno.get(i)).add(med / 2);
         }
         for (Map.Entry<String, List<Integer>> m : alunos.entrySet()) {
-            System.out.println("Aluno: " + m.getKey() + " Média " + m.getValue());
-
+            System.out.println("Aluno: " + m.getKey() + " Média: " + m.getValue());
 
         }
     }

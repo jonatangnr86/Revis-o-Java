@@ -8,6 +8,16 @@ public class Leitura {
         return JOptionPane.showInputDialog(msg);
     }
 
+    public static double realizarLeituraDouble(String msg){
+        while (true) {
+            try {
+                return Double.parseDouble(JOptionPane.showInputDialog(msg));
+            } catch (NumberFormatException nfe0) {
+                msg = msg + "Number Inválido";
+            }
+        }
+
+    }
     public static Integer realizarLeituraInteger(String msg) {
         while (true) {
             try {
