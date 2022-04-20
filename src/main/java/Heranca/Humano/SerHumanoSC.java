@@ -1,10 +1,15 @@
 package Heranca.Humano;
 
-public class SerHumanoSC {
+public abstract class SerHumanoSC {
+    // abstract torna a classe abstrata todos os metodos da Super Classe devem estar nas SubClasses
     private String nome;
     private String cpf;
     private String rg;
     private Enderecos endereco;
+
+    public abstract boolean ValidaCodigo(); //Obriga todas as classes ter esse metodo.
+                                            //Método sem implementação na classe mãe
+                                            // E com implemento nas SubClasses
 
     public String getNome() {
         return nome;

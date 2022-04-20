@@ -1,13 +1,11 @@
 package Heranca.Humano;
 
-public class Professor extends Funcionario { // herda a Super classe SerHumanoSC
+public class Professor extends SerHumanoSC { // herda a Super classe SerHumanoSC tendo poder encima das subClasses
 
-    private int matriculaProfessor;
+    private Integer matriculaProfessor;
     private String formacao;
     private String curso;
     private int nrHoras;
-
-
 
     public int getMatriculaProfessor() {
         return matriculaProfessor;
@@ -39,5 +37,15 @@ public class Professor extends Funcionario { // herda a Super classe SerHumanoSC
 
     public void setNrHoras(int nrHoras) {
         this.nrHoras = nrHoras;
+    }
+
+
+    @Override // Metodo valida matricula
+    public boolean ValidaCodigo() {
+        if(this.matriculaProfessor == null){
+            return false;
+        }else {
+            return true;
+        }
     }
 }

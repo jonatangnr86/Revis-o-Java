@@ -2,11 +2,14 @@ package Heranca.Humano;
 
 public class Aluno extends SerHumanoSC {
 
-    private int matriculaAluno;
+    private Integer matriculaAluno;
     private String curso;
     private String turno;
     private int periodo;
 
+    public Aluno(Integer matriculaAluno) {
+        this.matriculaAluno = matriculaAluno;
+    }
 
     public int getMatriculaAluno() {
         return matriculaAluno;
@@ -38,5 +41,15 @@ public class Aluno extends SerHumanoSC {
 
     public void setPeriodo(int periodo) {
         this.periodo = periodo;
+    }
+
+
+    @Override // Metodo valida matricula
+    public boolean ValidaCodigo() {
+        if(this.matriculaAluno == null){
+            return false;
+        }else {
+            return true;
+        }
     }
 }

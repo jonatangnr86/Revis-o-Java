@@ -49,4 +49,15 @@ public class Funcionario extends SerHumanoSC { // Herda atributos da classe SerH
     public void setDataAdmissao(Date dataAdmissao) {
         this.dataAdmissao = dataAdmissao;
     }
+
+
+    @Override  // Metodo valida matricula
+    public boolean ValidaCodigo() {
+        if(this.matriculaFuncionario == null){
+            return false;
+        }else {
+            return true;
+        }
+    }
 }
+
